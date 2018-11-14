@@ -1,11 +1,9 @@
 import java.awt.Color;
 import java.awt.Graphics;
 
-public class LineDemoPanel extends MyPanel
+public class RectangleDemoPanel extends MyPanel
 {
-    private int constant = 50;
-    
-    public LineDemoPanel()
+    public RectangleDemoPanel()
     {
         super();
     }
@@ -16,15 +14,23 @@ public class LineDemoPanel extends MyPanel
         
         g.setColor(Color.BLACK);
         
+        
         int startX = 10;
         int startY = 10;
         
         int endX = 280;
         int endY = 280;
         
-        g.drawLine(startX, startY, endX, endY);
-        g.drawLine(startX+constant, startY+constant, endX+constant, endY+constant);
+        g.drawRect(startX, startY, endX, endY);
+        
+         startX += 10;
+         startY += 10;
+          
+         endX += 280;
+         endY += 280;
+         
+         
+        
         
     }
-
 }
