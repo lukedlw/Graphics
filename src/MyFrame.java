@@ -2,8 +2,8 @@ import javax.swing.JFrame;
 
 public class MyFrame extends JFrame
 {
-    private final int WIDTH = 300;
-    private final int HEIGHT = 400;
+    private final int WIDTH = 800;
+    private final int HEIGHT = 800;
     private static MyPanel panel;
     
     public MyFrame(String title)
@@ -30,6 +30,13 @@ public class MyFrame extends JFrame
         setVisible(true);
     }
     
+    public void paintOval()
+    {
+        panel = new OvalDemoPanel();
+        add(panel);
+        setVisible(true);
+    }
+    
 
     public static void main(String[] args)
     {
@@ -37,7 +44,10 @@ public class MyFrame extends JFrame
         frame.paintLine();
         
         MyFrame frame1 = new MyFrame("rectangle");
-        frame.paintRectangle();
+        frame1.paintRectangle();
+        
+        MyFrame frame2 = new MyFrame("Oval");
+        frame2.paintOval();
         
     }
 
